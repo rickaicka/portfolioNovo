@@ -6,6 +6,9 @@ $bold: 700;
 $vermelho: #A81E22;
 $branco: #ffffff;
 $fontSize: 1em;
+$cinzaClaro: #d7d9dc;
+$cinzaPadrao: #7e8082;
+$cinzaDestaque: #6f6f73;
 
 
 $break-small: 40em;
@@ -13,12 +16,12 @@ $break-small: 40em;
 
 @mixin fontPadraoMX($fontSize){
     font-family: $fontRegular;
-    color: #7e8082;
+    color: $cinzaPadrao ;
     font-size: $fontSize;
 }
 @mixin fontDestaqueMX($fontSize){
     font-family: $fontDestaque;
-    color: #6f6f73;
+    color: $cinzaDestaque;
     font-size: $fontSize;  
     text-transform: uppercase;
     font-weight: $light;
@@ -95,6 +98,10 @@ table {
     }
     .bannerTitle{
         display: none;
+    }
+    .itemServico{
+        margin-right: 5px;
+        margin-left: 25px;
     }
 }
 
@@ -193,6 +200,92 @@ header{
                 & p{
                     @include fontPadraoMX(0.9em);
                     color: $branco;
+                }
+            }
+        }
+    }
+}
+.servicos{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    & .title{
+        & h3{
+            @include fontDestaqueMX(1.4em);
+        }
+    }
+    & .all{
+        & a{
+            @include fontDestaqueMX(1em);
+            & i{
+                background-color: $cinzaClaro;
+                padding: 10px 12px;
+                border-radius: 50%;
+                border: 1px solid transparent;
+                margin-left: 10px;
+            }
+        }
+    }
+    & .botoes{
+        margin-bottom: 20px;
+        & .btn-default{
+            border: none;
+            background:none;
+            box-shadow: none;
+            @include fontDestaqueMX(1em);
+            border: 2px solid transparent;
+
+        }
+        & .active{
+            border: 2px solid #e7e8ea;
+            background-color:$branco;
+            box-shadow: none;
+            @include fontDestaqueMX(1em);
+        }
+    }
+    & .itemServico{
+        margin-right: 55px;
+        margin-bottom: 20px;
+        background-color: #b3b8bc;
+        border: 8px solid #53575f;
+        box-sizing: border-box;
+        height: 250px;
+        width: 280px;
+        padding-right: 0;
+        & .nomeServico{
+            @include fontDestaqueMX(1.3em);
+            font-weight: $bold;
+            height: 75px;
+            margin-top: 30px;
+            line-height: 30px;
+        }
+        & .tipoServico{
+            @include fontPadraoMX(1em);
+            font-style: italic;
+        }
+        & .vejaMais{
+            background-color: $vermelho;
+            padding: 10px 30px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            width: 39px;
+            border-right: 1px solid #53575f;
+            @include transitionMX(width, .5s);
+            margin-top: 15px;
+            & i{
+                color: $branco;
+                font-size: 1.3em;
+                width: 105px;
+            }
+            &:hover{
+                width: 170px;
+                & i{
+                    &:after{
+                        content: 'Veja Mais';
+                        @include fontDestaqueMX(0.8em);
+                        color: $branco;
+                        width: 105px;
+                        margin-left: 15px;
+                    }
                 }
             }
         }
