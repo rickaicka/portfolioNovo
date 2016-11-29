@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     autoPrefixer = require('gulp-autoprefixer'),
     cssMin = require('gulp-cssmin'),
     uglify = require('gulp-uglify'),
+    rename = require('gulp-rename'),
     useMin = require('gulp-usemin');
 
 var paths = {
@@ -22,11 +23,18 @@ gulp.task('sass', ['css'], function () {
         .pipe(gulp.dest(paths.sassDestPath));
 });
 
-gulp.task('css', function(){
+gulp.task('css',function(){
    return gulp.src('./**/*.html')
     .pipe(htmlReplace({
-       'css':'css/style.css'
+       'css':'css/style.min.css'
    }));
+});
+
+gulp.task('minify', ['sass'], function(){
+  gulp.src(paths.sassDestPath+'**/style.css')
+    .pipe(cssMin())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('./css'));  
 });
 
 
