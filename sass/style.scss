@@ -1,0 +1,200 @@
+$fontRegular: 'Open Sans', sans-serif;
+$fontDestaque: 'Oswald', sans-serif;
+$light: 300;
+$regular: 400;
+$bold: 700;
+$vermelho: #A81E22;
+$branco: #ffffff;
+$fontSize: 1em;
+
+
+$break-small: 40em;
+
+
+@mixin fontPadraoMX($fontSize){
+    font-family: $fontRegular;
+    color: #7e8082;
+    font-size: $fontSize;
+}
+@mixin fontDestaqueMX($fontSize){
+    font-family: $fontDestaque;
+    color: #6f6f73;
+    font-size: $fontSize;  
+    text-transform: uppercase;
+    font-weight: $light;
+}
+@mixin transitionMX($propriedade, $tempo){
+    transition: $propriedade, $tempo;
+}
+
+/*  INÍCIO RESET */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* FIM RESET */
+
+/* MEDIA QUERIES - MOBILE */
+
+@media screen and (max-width: $break-small){
+    header{
+        & .logo{
+            & a{
+                & img{
+                    height: 70px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+    .bannerTitle{
+        display: none;
+    }
+}
+
+/* MEDIA QUERIES - MOBILE */
+
+
+header{
+    margin:20px 0;
+    & .logo{
+        & a{
+            & img{
+                height: 70px;
+            }
+        }
+    }
+    & .menu{
+        & ul{
+            & li{
+                display: inline-block;
+                padding: 27px 25px;
+                background-color: transparent;
+                @include transitionMX(background-color, 0.5s);
+                &:hover{
+                    background-color: $vermelho;
+                    color: $branco;
+                }
+                & a{
+                    @include fontDestaqueMX(0.9em);
+                    text-decoration: none;
+                    &:hover{
+                        color: $branco;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.banner{
+    & img{
+        width: 100%;
+        display: block;
+    }
+    & .bannerTitle{
+        position: relative;
+        margin-top:-40rem;
+        background-color: rgba(0,0,0, 0.4);
+        padding: 100px 30px;
+        & ul{
+            & li{
+                & h2{
+                    @include fontDestaqueMX(3em);
+                    color: $branco;
+                    text-align: center;
+                }
+                & p{
+                    @include fontDestaqueMX(1.5em);
+                    color: $branco;
+                    text-align: center;
+                    margin: 15px 0 30px 0;
+                }
+                & a{
+                    @include fontDestaqueMX(0.8em);
+                    color: $branco;
+                    text-align: center;
+                    border: 1px solid $branco;
+                    border-radius: 3px;
+                    padding: 15px 40px;
+                    text-decoration: none;
+                    @include transitionMX(background-color, 0.5s);
+                    &:hover{
+                        background-color: $branco;
+                        color: #6f6f73;
+                    }
+                }
+            }
+        }
+    }
+}
+.workflow{
+    background-color: $vermelho;
+    & .box{
+        padding-top: 45px;
+        padding-bottom: 30px;
+        & ul{
+            & li{
+                margin-bottom: 15px;
+                & i{
+                    color: $branco;
+                    font-size: 4em;
+                }
+                & h2{
+                    @include fontDestaqueMX(1.8em);
+                    color: $branco;
+                }
+                & p{
+                    @include fontPadraoMX(0.9em);
+                    color: $branco;
+                }
+            }
+        }
+    }
+}
