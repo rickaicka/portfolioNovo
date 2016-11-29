@@ -48,7 +48,11 @@ table {
   border-spacing: 0; }
 
 /* FIM RESET */
-/* MEDIA QUERIES - MOBILE */
+/* MEDIA QUERIES */
+@media screen and (min-width: 1280px) and (max-width: 1440px) {
+  .bannerTitle {
+    margin-top: -33rem !important; } }
+
 @media screen and (max-width: 40em) {
   .slicknav_menu {
     display: block !important; }
@@ -70,7 +74,7 @@ table {
     margin-right: 5px;
     margin-left: 25px; } }
 
-/* MEDIA QUERIES - MOBILE */
+/* MEDIA QUERIES */
 .slicknav_menu {
   display: none; }
 
@@ -97,16 +101,16 @@ header {
       header .menu ul li a:hover {
         color: #ffffff; }
 
-.banner img {
+.home .banner img {
   width: 100%;
   display: block; }
 
-.banner .bannerTitle {
+.home .banner .bannerTitle {
   position: relative;
   margin-top: -40rem;
   background-color: rgba(0, 0, 0, 0.4);
   padding: 100px 30px; }
-  .banner .bannerTitle ul li h2 {
+  .home .banner .bannerTitle ul li h2 {
     font-family: "Oswald", sans-serif;
     color: #6f6f73;
     font-size: 3em;
@@ -114,7 +118,7 @@ header {
     font-weight: 300;
     color: #ffffff;
     text-align: center; }
-  .banner .bannerTitle ul li p {
+  .home .banner .bannerTitle ul li p {
     font-family: "Oswald", sans-serif;
     color: #6f6f73;
     font-size: 1.5em;
@@ -123,7 +127,7 @@ header {
     color: #ffffff;
     text-align: center;
     margin: 15px 0 30px 0; }
-  .banner .bannerTitle ul li a {
+  .home .banner .bannerTitle ul li a {
     font-family: "Oswald", sans-serif;
     color: #6f6f73;
     font-size: 0.8em;
@@ -137,57 +141,57 @@ header {
     text-decoration: none;
     -webkit-transition: background-color, 0.5s;
     transition: background-color, 0.5s; }
-    .banner .bannerTitle ul li a:hover {
+    .home .banner .bannerTitle ul li a:hover {
       background-color: #ffffff;
       color: #6f6f73; }
 
-.workflow {
+.home .workflow {
   background-color: #A81E22; }
-  .workflow .box {
+  .home .workflow .box {
     padding-top: 45px;
     padding-bottom: 30px; }
-    .workflow .box ul li {
+    .home .workflow .box ul li {
       margin-bottom: 15px; }
-      .workflow .box ul li i {
+      .home .workflow .box ul li i {
         color: #ffffff;
         font-size: 4em; }
-      .workflow .box ul li h2 {
+      .home .workflow .box ul li h2 {
         font-family: "Oswald", sans-serif;
         color: #6f6f73;
         font-size: 1.8em;
         text-transform: uppercase;
         font-weight: 300;
         color: #ffffff; }
-      .workflow .box ul li p {
+      .home .workflow .box ul li p {
         font-family: "Open Sans", sans-serif;
         color: #7e8082;
         font-size: 0.9em;
         color: #ffffff; }
 
-.servicos {
+.home .servicos {
   padding-top: 30px;
   padding-bottom: 30px; }
-  .servicos .title h3 {
+  .home .servicos .title h3 {
     font-family: "Oswald", sans-serif;
     color: #6f6f73;
     font-size: 1.4em;
     text-transform: uppercase;
     font-weight: 300; }
-  .servicos .all a {
+  .home .servicos .all a {
     font-family: "Oswald", sans-serif;
     color: #6f6f73;
     font-size: 1em;
     text-transform: uppercase;
     font-weight: 300; }
-    .servicos .all a i {
+    .home .servicos .all a i {
       background-color: #d7d9dc;
       padding: 10px 12px;
       border-radius: 50%;
       border: 1px solid transparent;
       margin-left: 10px; }
-  .servicos .botoes {
+  .home .servicos .botoes {
     margin-bottom: 20px; }
-    .servicos .botoes .btn-default {
+    .home .servicos .botoes .btn-default {
       border: none;
       background: none;
       box-shadow: none;
@@ -197,7 +201,7 @@ header {
       text-transform: uppercase;
       font-weight: 300;
       border: 2px solid transparent; }
-    .servicos .botoes .active {
+    .home .servicos .botoes .active {
       border: 2px solid #e7e8ea;
       background-color: #ffffff;
       box-shadow: none;
@@ -206,7 +210,7 @@ header {
       font-size: 1em;
       text-transform: uppercase;
       font-weight: 300; }
-  .servicos .itemServico {
+  .home .servicos .itemServico {
     margin-right: 55px;
     margin-bottom: 20px;
     background-color: #b3b8bc;
@@ -215,7 +219,7 @@ header {
     height: 250px;
     width: 280px;
     padding-right: 0; }
-    .servicos .itemServico .nomeServico {
+    .home .servicos .itemServico .nomeServico {
       font-family: "Oswald", sans-serif;
       color: #6f6f73;
       font-size: 1.3em;
@@ -225,12 +229,12 @@ header {
       height: 75px;
       margin-top: 30px;
       line-height: 30px; }
-    .servicos .itemServico .tipoServico {
+    .home .servicos .itemServico .tipoServico {
       font-family: "Open Sans", sans-serif;
       color: #7e8082;
       font-size: 1em;
       font-style: italic; }
-    .servicos .itemServico .vejaMais {
+    .home .servicos .itemServico .vejaMais {
       background-color: #A81E22;
       padding: 10px 30px;
       border-top-left-radius: 20px;
@@ -240,13 +244,13 @@ header {
       -webkit-transition: width, 0.5s;
       transition: width, 0.5s;
       margin-top: 15px; }
-      .servicos .itemServico .vejaMais i {
+      .home .servicos .itemServico .vejaMais i {
         color: #ffffff;
         font-size: 1.3em;
         width: 105px; }
-      .servicos .itemServico .vejaMais:hover {
+      .home .servicos .itemServico .vejaMais:hover {
         width: 170px; }
-        .servicos .itemServico .vejaMais:hover i:after {
+        .home .servicos .itemServico .vejaMais:hover i:after {
           content: 'Veja Mais';
           font-family: "Oswald", sans-serif;
           color: #6f6f73;
@@ -307,9 +311,9 @@ footer {
       footer .contato ul li ul li i {
         float: left;
         color: #ffffff;
-        font-size: 1.9em; }
+        font-size: 1.9em;
+        margin-right: 15px; }
       footer .contato ul li ul li p, footer .contato ul li ul li a {
-        float: right;
         font-family: "Open Sans", sans-serif;
         color: #7e8082;
         font-size: 1em;

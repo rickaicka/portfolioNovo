@@ -1,129 +1,131 @@
-<section class="banner">
-    <div class="container-fluid">
-        <div class="row">
-            <div>
-                <ul>
-                    <li>
-                        <img src="img/coding.jpg">
-                        <div class="bannerTitle col-xs-12 col-md-offset-3 col-md-6">
-                            <ul>
-                                <li>
-                                    <h2>Bem vindo</h2>
-                                </li>
-                                <li>
-                                    <p>Lorem ipsum</p>
-                                </li>
-                                <li class="text-center">
-                                    <a href="">Veja</a>
-                                </li>
-                            </ul>
+<main class="home">
+    <section class="banner">
+        <div class="container-fluid">
+            <div class="row">
+                <div>
+                    <ul>
+                        <li>
+                            <img src="img/coding.jpg">
+                            <div class="bannerTitle col-xs-12 col-md-offset-3 col-md-6">
+                                <ul>
+                                    <li>
+                                        <h2>Bem vindo</h2>
+                                    </li>
+                                    <li>
+                                        <p>Lorem ipsum</p>
+                                    </li>
+                                    <li class="text-center">
+                                        <a href="">Veja</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="clearfix"></div>
+
+    <section class="workflow">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="box col-xs-12 col-md-offset-2 col-md-2">
+                    <ul>
+                        <li>
+                            <i class="fa fa-desktop"></i>
+                        </li>
+                        <li>
+                            <h2>
+                                Design Responsivo
+                            </h2>
+                        </li>
+                        <li>
+                            <p>
+                                Sed ut perspiciatis unde omnis iste natus error sit  accus  antium, dolorem que laudantium lorem ipsum totam
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box col-xs-12 col-md-offset-1 col-md-2">
+                    <ul>
+                        <li>
+                            <i class="fa fa-html5"></i>
+                        </li>
+                        <li>
+                            <h2>
+                                Semântica Ideal
+                            </h2>
+                        </li>
+                        <li>
+                            <p>
+                                Sed ut perspiciatis unde omnis iste natus error sit  accus  antium, dolorem que laudantium lorem ipsum totam
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box col-xs-12 col-md-offset-1 col-md-2">
+                    <ul>
+                        <li>
+                            <i class="fa fa-code"></i>
+                        </li>
+                        <li>
+                            <h2>
+                                Novas Tecnologias
+                            </h2>
+                        </li>
+                        <li>
+                            <p>
+                                Sed ut perspiciatis unde omnis iste natus error sit  accus  antium, dolorem que laudantium lorem ipsum totam
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="clearfix"></div>
+
+
+    <section class="servicos" ng-controller="ServicosController">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="title col-xs-6 col-md-offset-1 col-md-4">
+                    <h3>Últimos serviços</h3>
+                </div>
+                <div class="all col-xs-6 col-md-offset-5 col-md-2">
+                    <a href="">Veja Todos <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="botoes col-xs-12 col-md-offset-1 col-md-10">
+                    <div class="btn-group" opt-kind ok-key="filter" >
+                      <button type='button' class='btn btn-default active' ok-sel="*">Mostrar todos</button>
+                      <button type='button' class='btn btn-default' ok-sel=".site">Site Institucional</button>
+                      <button type='button' class='btn btn-default' ok-sel=".landing">Landing Page</button>
+                      <button type='button' class='btn btn-default' ok-sel=".emkt">E-mail Marketing</button>
+                      <button type='button' class='btn btn-default' ok-sel=".sistema">Sistemas</button>
+                      <button type='button' class='btn btn-default' ok-sel=".wordpress">Sites em Wordpress</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                 <ul id="isotopeContainer" isotope-container ng-cloak class="ng-cloak col-xs-12 col-md-offset-1 col-md-11">
+                    <li ng-repeat="x in xList" isotope-item class="kindling {{x.class}} col-xs-11 itemServico" onClick="removeItem(this)">
+                        <div class="nomeServico text-center">
+                           <h3>{{x.nome}}</h3>
+                        </div>
+                        <div class="tipoServico text-center">
+                           <span>{{x.tipo}}</span>
+                        </div>
+                        <div class="vejaMais pull-right">
+                            <a href=""><i class="fa fa-link"></i></a>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
-    </div>
-</section>
-
-<div class="clearfix"></div>
-
-<section class="workflow">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="box col-xs-12 col-md-offset-2 col-md-2">
-                <ul>
-                    <li>
-                        <i class="fa fa-desktop"></i>
-                    </li>
-                    <li>
-                        <h2>
-                            Design Responsivo
-                        </h2>
-                    </li>
-                    <li>
-                        <p>
-                            Sed ut perspiciatis unde omnis iste natus error sit  accus  antium, dolorem que laudantium lorem ipsum totam
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <div class="box col-xs-12 col-md-offset-1 col-md-2">
-                <ul>
-                    <li>
-                        <i class="fa fa-html5"></i>
-                    </li>
-                    <li>
-                        <h2>
-                            Semântica Ideal
-                        </h2>
-                    </li>
-                    <li>
-                        <p>
-                            Sed ut perspiciatis unde omnis iste natus error sit  accus  antium, dolorem que laudantium lorem ipsum totam
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <div class="box col-xs-12 col-md-offset-1 col-md-2">
-                <ul>
-                    <li>
-                        <i class="fa fa-code"></i>
-                    </li>
-                    <li>
-                        <h2>
-                            Novas Tecnologias
-                        </h2>
-                    </li>
-                    <li>
-                        <p>
-                            Sed ut perspiciatis unde omnis iste natus error sit  accus  antium, dolorem que laudantium lorem ipsum totam
-                        </p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<div class="clearfix"></div>
-
-
-<section class="servicos" ng-controller="ServicosController">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="title col-xs-6 col-md-offset-1 col-md-2">
-                <h3>Últimos serviços</h3>
-            </div>
-            <div class="all col-xs-6 col-md-offset-6 col-md-2">
-                <a href="">Veja Todos <i class="fa fa-arrow-right"></i></a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="botoes col-xs-12 col-md-offset-1 col-md-6">
-                <div class="btn-group" opt-kind ok-key="filter" >
-                  <button type='button' class='btn btn-default active' ok-sel="*">Mostrar todos</button>
-                  <button type='button' class='btn btn-default' ok-sel=".site">Site Institucional</button>
-                  <button type='button' class='btn btn-default' ok-sel=".landing">Landing Page</button>
-                  <button type='button' class='btn btn-default' ok-sel=".emkt">E-mail Marketing</button>
-                  <button type='button' class='btn btn-default' ok-sel=".sistema">Sistemas</button>
-                  <button type='button' class='btn btn-default' ok-sel=".wordpress">Sites em Wordpress</button>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-             <ul id="isotopeContainer" isotope-container ng-cloak class="ng-cloak col-xs-12 col-md-offset-1 col-md-11">
-                <li ng-repeat="x in xList" isotope-item class="kindling {{x.class}} col-xs-11 itemServico" onClick="removeItem(this)">
-                    <div class="nomeServico text-center">
-                       <h3>{{x.nome}}</h3>
-                    </div>
-                    <div class="tipoServico text-center">
-                       <span>{{x.tipo}}</span>
-                    </div>
-                    <div class="vejaMais pull-right">
-                        <a href=""><i class="fa fa-link"></i></a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
+    </section>
+</main>

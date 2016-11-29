@@ -16,6 +16,13 @@ var autoprefixerOptions = {
   browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
 };
 
+
+gulp.task('css',['minify'], function(){
+   return gulp.src('./**/*.html')
+    .pipe(htmlReplace({
+       'css':'css/style.min.css'
+   }));
+});
 gulp.task('sass', ['css'], function () {
     gulp.src(paths.sassSrcPath)
         .pipe(sass())
@@ -23,14 +30,7 @@ gulp.task('sass', ['css'], function () {
         .pipe(gulp.dest(paths.sassDestPath));
 });
 
-gulp.task('css',function(){
-   return gulp.src('./**/*.html')
-    .pipe(htmlReplace({
-       'css':'css/style.min.css'
-   }));
-});
-
-gulp.task('minify', ['sass'], function(){
+gulp.task('minify', function(){
   gulp.src(paths.sassDestPath+'**/style.css')
     .pipe(cssMin())
     .pipe(rename({suffix: '.min'}))
