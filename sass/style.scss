@@ -86,6 +86,18 @@ table {
 /* MEDIA QUERIES - MOBILE */
 
 @media screen and (max-width: $break-small){
+    .slicknav_menu{
+        display: block!important;
+        & .slicknav_nav{
+            & ul{
+                & li{
+                    @include fontDestaqueMX(1em);
+                    color: $branco;
+                }
+            }
+        }
+    }
+
     header{
         & .logo{
             & a{
@@ -95,9 +107,15 @@ table {
                 }
             }
         }
+        & .menu{
+            display: none;
+        }
     }
     .bannerTitle{
         display: none;
+    }
+    .botoes{
+        margin-top: 25px;
     }
     .itemServico{
         margin-right: 5px;
@@ -107,6 +125,9 @@ table {
 
 /* MEDIA QUERIES - MOBILE */
 
+.slicknav_menu{
+    display: none;
+}
 
 header{
     margin:20px 0;
@@ -288,6 +309,100 @@ header{
                     }
                 }
             }
+        }
+    }
+}
+
+footer{
+    background-color: #282b2e;
+    & .social{
+        padding-top: 25px;
+        padding-bottom: 25px;
+        & h2{
+            @include fontDestaqueMX(2.3em);
+            color: $branco;
+            margin-bottom: 30px;
+        }
+        & ul{
+            & li{
+                & ul{
+                    & li{
+                        display: inline-block;
+                        & a{
+                            color: $branco;
+                            & i{
+                                padding: 25px 0;
+                                width: 75px;
+                                border: 2px solid $branco;
+                                border-radius: 50%;
+                                text-align: center;
+                                font-size: 1.5em;
+                                margin-right: 10px;
+                                @include transitionMX(border-color, 0.2s);
+                                &:hover{
+                                    border-color: $vermelho;
+                                }
+                            }
+                            &:hover{
+                                @include transitionMX(color, 0.2s);
+                                color: $vermelho;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .contato{
+        padding-top: 25px;
+        padding-bottom: 25px;
+        background-color: #636a71;
+        & h2{
+            @include fontDestaqueMX(2.3em);
+            color: $branco;
+            margin-bottom: 30px;
+        }
+        & ul{
+            & li{
+                margin-bottom: 15px;
+                & ul{
+                    & li{
+                        & i{
+                            float: left;
+                            color: $branco;
+                            font-size: 1.9em;
+                        }
+                        & p, a{
+                            float: right;
+                            @include fontPadraoMX(1em);
+                            color: $branco;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .bottomMenu{
+        padding-top: 25px;
+        padding-bottom: 25px;
+        & ul{
+            & li{
+                display: inline-block;
+                margin-right: 25px;
+                & a{
+                    @include fontDestaqueMX(1.1em);
+                    color: $branco;
+                }
+            }
+        }
+    }
+    & .copyright{
+        padding-top: 25px;
+        padding-bottom: 25px;
+        & p{
+            color: $branco;
+            @include fontPadraoMX(1.1em);
         }
     }
 }
