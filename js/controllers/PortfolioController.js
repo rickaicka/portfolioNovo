@@ -1,4 +1,4 @@
-angular.module('Main').controller('PortfolioController', function($scope, $resource){
+angular.module('Main').controller('PortfolioController', function($scope, $routeParams, $resource){
     
     $scope.cases = [];
     $scope.filtro = '';
@@ -18,5 +18,16 @@ angular.module('Main').controller('PortfolioController', function($scope, $resou
             }
         );
     };
+
+    Case.get({id: $routeParams.caseId},
+            function(casePortfolio){
+                $scope.casePortfolio = casePortfolio;
+            },
+            function(erro){
+                console.log("Não foi possível obter contato");
+                console.log(erro);
+            }
+       );
+
     $scope.init();
 })

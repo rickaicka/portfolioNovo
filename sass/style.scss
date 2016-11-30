@@ -404,6 +404,20 @@ footer{
 /* HOME-FIM */
 
 /* PORTFOLIO LISTA - INICIO*/
-
+.portfolio{
+    & .case{
+        margin-top: 25px;
+        margin-bottom: 25px;
+        & li{
+            & h3{
+                @include fontDestaqueMX(1.3em);
+                background-color: $branco;
+                margin-top: -45px;
+                position: absolute;
+                padding: 25px 20px 0px 10px;
+            }
+        }
+    }
+}
 /* PORTFOLIO LISTA - INICIO*/
 

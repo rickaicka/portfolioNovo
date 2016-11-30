@@ -322,4 +322,18 @@ footer {
 
 /* HOME-FIM */
 /* PORTFOLIO LISTA - INICIO*/
+.portfolio .case {
+  margin-top: 25px;
+  margin-bottom: 25px; }
+  .portfolio .case li h3 {
+    font-family: "Oswald", sans-serif;
+    color: #6f6f73;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: 300;
+    background-color: #ffffff;
+    margin-top: -45px;
+    position: absolute;
+    padding: 25px 20px 0px 10px; }
+
 /* PORTFOLIO LISTA - INICIO*/
