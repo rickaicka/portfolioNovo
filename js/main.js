@@ -14,6 +14,11 @@ angular.module('Main', ['ngRoute',  'iso.directives']).config(function($routePro
         templateUrl:'partials/portfolio.html',
         controller: 'PortfolioController'
     });
+    
+    $routeProvider.when('/portfolio/:caseId', {
+        templateUrl:'partials/case.html',
+        controller:'PortfolioController'
+    })
 
     $routeProvider.otherwise({redirectTo:'/'})
 });
