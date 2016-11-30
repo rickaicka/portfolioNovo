@@ -12,7 +12,7 @@ angular.module('Main', ['ngRoute',  'iso.directives']).config(function($routePro
 
     $routeProvider.when('/portfolio', {
         templateUrl:'partials/portfolio.html',
-        controller: 'ServicosController'
+        controller: 'PortfolioController'
     });
 
     $routeProvider.otherwise({redirectTo:'/'})

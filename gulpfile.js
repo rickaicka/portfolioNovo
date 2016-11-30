@@ -17,6 +17,14 @@ var autoprefixerOptions = {
 };
 
 
+
+gulp.task('minify', function(){
+  gulp.src(paths.sassDestPath+'**/style.css')
+    .pipe(cssMin())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('./css'));
+});
+
 gulp.task('css',['minify'], function(){
    return gulp.src('./**/*.html')
     .pipe(htmlReplace({
@@ -28,13 +36,6 @@ gulp.task('sass', ['css'], function () {
         .pipe(sass())
         .pipe(autoPrefixer(autoprefixerOptions))
         .pipe(gulp.dest(paths.sassDestPath));
-});
-
-gulp.task('minify', function(){
-  gulp.src(paths.sassDestPath+'**/style.css')
-    .pipe(cssMin())
-    .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('./css'));  
 });
 
 

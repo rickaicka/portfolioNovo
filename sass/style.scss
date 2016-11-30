@@ -37,59 +37,6 @@ $break-small: 40em;
     padding-bottom: 40px;
 }
 
-/*  INÍCIO RESET */
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* FIM RESET */
-
 /* MEDIA QUERIES */
 
 @media screen and (min-width:1280px) and (max-width:1440px){
@@ -131,9 +78,119 @@ table {
         margin-right: 5px;
         margin-left: 25px;
     }
+    main{
+        margin-bottom: -625px!important;
+    }
+    footer, .push{
+        height: 625px!important;
+    }
 }
 
 /* MEDIA QUERIES */
+
+/* COMMON CLASS */
+.pageTop{
+    @include pageTitleMX();
+    & div{
+        & div{
+            & div{
+                & h1{
+                    @include fontDestaqueMX(2.3em);
+                    color: $branco;
+                }
+            }
+        }
+    }
+}
+
+
+.servicos{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    & .title{
+        & h3{
+            @include fontDestaqueMX(1.4em);
+        }
+    }
+    & .all{
+        & a{
+            @include fontDestaqueMX(1em);
+            & i{
+                background-color: $cinzaClaro;
+                padding: 10px 12px;
+                border-radius: 50%;
+                border: 1px solid transparent;
+                margin-left: 10px;
+            }
+        }
+    }
+    & .botoes{
+        margin-bottom: 20px;
+        & .btn-default{
+            border: none;
+            background:none;
+            box-shadow: none;
+            @include fontDestaqueMX(1em);
+            border: 2px solid transparent;
+
+        }
+        & .active{
+            border: 2px solid #e7e8ea;
+            background-color:$branco;
+            box-shadow: none;
+            @include fontDestaqueMX(1em);
+        }
+    }
+    & .itemServico{
+        margin-right: 55px;
+        margin-bottom: 20px;
+        background-color: #b3b8bc;
+        border: 8px solid #53575f;
+        box-sizing: border-box;
+        height: 250px;
+        width: 280px;
+        padding-right: 0;
+        & .nomeServico{
+            @include fontDestaqueMX(1.3em);
+            font-weight: $bold;
+            height: 75px;
+            margin-top: 30px;
+            line-height: 30px;
+        }
+        & .tipoServico{
+            @include fontPadraoMX(1em);
+            font-style: italic;
+        }
+        & .vejaMais{
+            background-color: $vermelho;
+            padding: 10px 30px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            width: 39px;
+            border-right: 1px solid #53575f;
+            @include transitionMX(width, .5s);
+            margin-top: 15px;
+            & i{
+                color: $branco;
+                font-size: 1.3em;
+                width: 105px;
+            }
+            &:hover{
+                width: 170px;
+                & i{
+                    &:after{
+                        content: 'Veja Mais';
+                        @include fontDestaqueMX(0.8em);
+                        color: $branco;
+                        width: 105px;
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+/* COMMON CLASS */
 
 .slicknav_menu{
     display: none;
@@ -170,7 +227,15 @@ header{
         }
     }
 }
+main{
+    min-height: 100%;
+    margin-bottom: -345px;
+    & .push{
+        height: 345px;
+    }
+}
 footer{
+    height: 345px;
     background-color: #282b2e;
     & .social{
         padding-top: 25px;
@@ -335,94 +400,10 @@ footer{
             }
         }
     }
-    .servicos{
-        padding-top: 30px;
-        padding-bottom: 30px;
-        & .title{
-            & h3{
-                @include fontDestaqueMX(1.4em);
-            }
-        }
-        & .all{
-            & a{
-                @include fontDestaqueMX(1em);
-                & i{
-                    background-color: $cinzaClaro;
-                    padding: 10px 12px;
-                    border-radius: 50%;
-                    border: 1px solid transparent;
-                    margin-left: 10px;
-                }
-            }
-        }
-        & .botoes{
-            margin-bottom: 20px;
-            & .btn-default{
-                border: none;
-                background:none;
-                box-shadow: none;
-                @include fontDestaqueMX(1em);
-                border: 2px solid transparent;
-
-            }
-            & .active{
-                border: 2px solid #e7e8ea;
-                background-color:$branco;
-                box-shadow: none;
-                @include fontDestaqueMX(1em);
-            }
-        }
-        & .itemServico{
-            margin-right: 55px;
-            margin-bottom: 20px;
-            background-color: #b3b8bc;
-            border: 8px solid #53575f;
-            box-sizing: border-box;
-            height: 250px;
-            width: 280px;
-            padding-right: 0;
-            & .nomeServico{
-                @include fontDestaqueMX(1.3em);
-                font-weight: $bold;
-                height: 75px;
-                margin-top: 30px;
-                line-height: 30px;
-            }
-            & .tipoServico{
-                @include fontPadraoMX(1em);
-                font-style: italic;
-            }
-            & .vejaMais{
-                background-color: $vermelho;
-                padding: 10px 30px;
-                border-top-left-radius: 20px;
-                border-bottom-left-radius: 20px;
-                width: 39px;
-                border-right: 1px solid #53575f;
-                @include transitionMX(width, .5s);
-                margin-top: 15px;
-                & i{
-                    color: $branco;
-                    font-size: 1.3em;
-                    width: 105px;
-                }
-                &:hover{
-                    width: 170px;
-                    & i{
-                        &:after{
-                            content: 'Veja Mais';
-                            @include fontDestaqueMX(0.8em);
-                            color: $branco;
-                            width: 105px;
-                            margin-left: 15px;
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
 /* HOME-FIM */
+
+/* PORTFOLIO LISTA - INICIO*/
 
 /* PORTFOLIO LISTA - INICIO*/
 

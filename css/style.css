@@ -1,53 +1,4 @@
 @charset "UTF-8";
-/*  INÍCIO RESET */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-/* FIM RESET */
 /* MEDIA QUERIES */
 @media screen and (min-width: 1280px) and (max-width: 1440px) {
   .bannerTitle {
@@ -72,9 +23,121 @@ table {
     display: none; }
   .itemServico {
     margin-right: 5px;
-    margin-left: 25px; } }
+    margin-left: 25px; }
+  main {
+    margin-bottom: -625px !important; }
+  footer, .push {
+    height: 625px !important; } }
 
 /* MEDIA QUERIES */
+/* COMMON CLASS */
+.pageTop {
+  background-color: #A81E22;
+  color: #ffffff;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+  .pageTop div div div h1 {
+    font-family: "Oswald", sans-serif;
+    color: #6f6f73;
+    font-size: 2.3em;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #ffffff; }
+
+.servicos {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .servicos .title h3 {
+    font-family: "Oswald", sans-serif;
+    color: #6f6f73;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    font-weight: 300; }
+  .servicos .all a {
+    font-family: "Oswald", sans-serif;
+    color: #6f6f73;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 300; }
+    .servicos .all a i {
+      background-color: #d7d9dc;
+      padding: 10px 12px;
+      border-radius: 50%;
+      border: 1px solid transparent;
+      margin-left: 10px; }
+  .servicos .botoes {
+    margin-bottom: 20px; }
+    .servicos .botoes .btn-default {
+      border: none;
+      background: none;
+      box-shadow: none;
+      font-family: "Oswald", sans-serif;
+      color: #6f6f73;
+      font-size: 1em;
+      text-transform: uppercase;
+      font-weight: 300;
+      border: 2px solid transparent; }
+    .servicos .botoes .active {
+      border: 2px solid #e7e8ea;
+      background-color: #ffffff;
+      box-shadow: none;
+      font-family: "Oswald", sans-serif;
+      color: #6f6f73;
+      font-size: 1em;
+      text-transform: uppercase;
+      font-weight: 300; }
+  .servicos .itemServico {
+    margin-right: 55px;
+    margin-bottom: 20px;
+    background-color: #b3b8bc;
+    border: 8px solid #53575f;
+    box-sizing: border-box;
+    height: 250px;
+    width: 280px;
+    padding-right: 0; }
+    .servicos .itemServico .nomeServico {
+      font-family: "Oswald", sans-serif;
+      color: #6f6f73;
+      font-size: 1.3em;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-weight: 700;
+      height: 75px;
+      margin-top: 30px;
+      line-height: 30px; }
+    .servicos .itemServico .tipoServico {
+      font-family: "Open Sans", sans-serif;
+      color: #7e8082;
+      font-size: 1em;
+      font-style: italic; }
+    .servicos .itemServico .vejaMais {
+      background-color: #A81E22;
+      padding: 10px 30px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      width: 39px;
+      border-right: 1px solid #53575f;
+      -webkit-transition: width, 0.5s;
+      transition: width, 0.5s;
+      margin-top: 15px; }
+      .servicos .itemServico .vejaMais i {
+        color: #ffffff;
+        font-size: 1.3em;
+        width: 105px; }
+      .servicos .itemServico .vejaMais:hover {
+        width: 170px; }
+        .servicos .itemServico .vejaMais:hover i:after {
+          content: 'Veja Mais';
+          font-family: "Oswald", sans-serif;
+          color: #6f6f73;
+          font-size: 0.8em;
+          text-transform: uppercase;
+          font-weight: 300;
+          color: #ffffff;
+          width: 105px;
+          margin-left: 15px; }
+
+/* COMMON CLASS */
 .slicknav_menu {
   display: none; }
 
@@ -101,7 +164,14 @@ header {
       header .menu ul li a:hover {
         color: #ffffff; }
 
+main {
+  min-height: 100%;
+  margin-bottom: -345px; }
+  main .push {
+    height: 345px; }
+
 footer {
+  height: 345px;
   background-color: #282b2e; }
   footer .social {
     padding-top: 25px;
@@ -250,98 +320,6 @@ footer {
         font-size: 0.9em;
         color: #ffffff; }
 
-.home .servicos {
-  padding-top: 30px;
-  padding-bottom: 30px; }
-  .home .servicos .title h3 {
-    font-family: "Oswald", sans-serif;
-    color: #6f6f73;
-    font-size: 1.4em;
-    text-transform: uppercase;
-    font-weight: 300; }
-  .home .servicos .all a {
-    font-family: "Oswald", sans-serif;
-    color: #6f6f73;
-    font-size: 1em;
-    text-transform: uppercase;
-    font-weight: 300; }
-    .home .servicos .all a i {
-      background-color: #d7d9dc;
-      padding: 10px 12px;
-      border-radius: 50%;
-      border: 1px solid transparent;
-      margin-left: 10px; }
-  .home .servicos .botoes {
-    margin-bottom: 20px; }
-    .home .servicos .botoes .btn-default {
-      border: none;
-      background: none;
-      box-shadow: none;
-      font-family: "Oswald", sans-serif;
-      color: #6f6f73;
-      font-size: 1em;
-      text-transform: uppercase;
-      font-weight: 300;
-      border: 2px solid transparent; }
-    .home .servicos .botoes .active {
-      border: 2px solid #e7e8ea;
-      background-color: #ffffff;
-      box-shadow: none;
-      font-family: "Oswald", sans-serif;
-      color: #6f6f73;
-      font-size: 1em;
-      text-transform: uppercase;
-      font-weight: 300; }
-  .home .servicos .itemServico {
-    margin-right: 55px;
-    margin-bottom: 20px;
-    background-color: #b3b8bc;
-    border: 8px solid #53575f;
-    box-sizing: border-box;
-    height: 250px;
-    width: 280px;
-    padding-right: 0; }
-    .home .servicos .itemServico .nomeServico {
-      font-family: "Oswald", sans-serif;
-      color: #6f6f73;
-      font-size: 1.3em;
-      text-transform: uppercase;
-      font-weight: 300;
-      font-weight: 700;
-      height: 75px;
-      margin-top: 30px;
-      line-height: 30px; }
-    .home .servicos .itemServico .tipoServico {
-      font-family: "Open Sans", sans-serif;
-      color: #7e8082;
-      font-size: 1em;
-      font-style: italic; }
-    .home .servicos .itemServico .vejaMais {
-      background-color: #A81E22;
-      padding: 10px 30px;
-      border-top-left-radius: 20px;
-      border-bottom-left-radius: 20px;
-      width: 39px;
-      border-right: 1px solid #53575f;
-      -webkit-transition: width, 0.5s;
-      transition: width, 0.5s;
-      margin-top: 15px; }
-      .home .servicos .itemServico .vejaMais i {
-        color: #ffffff;
-        font-size: 1.3em;
-        width: 105px; }
-      .home .servicos .itemServico .vejaMais:hover {
-        width: 170px; }
-        .home .servicos .itemServico .vejaMais:hover i:after {
-          content: 'Veja Mais';
-          font-family: "Oswald", sans-serif;
-          color: #6f6f73;
-          font-size: 0.8em;
-          text-transform: uppercase;
-          font-weight: 300;
-          color: #ffffff;
-          width: 105px;
-          margin-left: 15px; }
-
 /* HOME-FIM */
+/* PORTFOLIO LISTA - INICIO*/
 /* PORTFOLIO LISTA - INICIO*/
