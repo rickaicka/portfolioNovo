@@ -30,6 +30,13 @@ $break-small: 40em;
     transition: $propriedade, $tempo;
 }
 
+@mixin pageTitleMX{
+    background-color: $vermelho;
+    color: $branco;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
 /*  INÍCIO RESET */
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -163,7 +170,105 @@ header{
         }
     }
 }
+footer{
+    background-color: #282b2e;
+    & .social{
+        padding-top: 25px;
+        padding-bottom: 25px;
+        & h2{
+            @include fontDestaqueMX(2.3em);
+            color: $branco;
+            margin-bottom: 30px;
+        }
+        & ul{
+            & li{
+                & ul{
+                    & li{
+                        display: inline-block;
+                        & a{
+                            color: $branco;
+                            & i{
+                                padding: 25px 0;
+                                width: 75px;
+                                border: 2px solid $branco;
+                                border-radius: 50%;
+                                text-align: center;
+                                font-size: 1.5em;
+                                margin-right: 10px;
+                                @include transitionMX(border-color, 0.2s);
+                                &:hover{
+                                    border-color: $vermelho;
+                                }
+                            }
+                            &:hover{
+                                @include transitionMX(color, 0.2s);
+                                color: $vermelho;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .contato{
+        padding-top: 25px;
+        padding-bottom: 25px;
+        background-color: #636a71;
+        & h2{
+            @include fontDestaqueMX(2.3em);
+            color: $branco;
+            margin-bottom: 30px;
+        }
+        & ul{
+            & li{
+                margin-bottom: 15px;
+                & ul{
+                    & li{
+                        & i{
+                            float: left;
+                            color: $branco;
+                            font-size: 1.9em;
+                            margin-right: 15px;
+                        }
+                        & p, a{
+                            @include fontPadraoMX(1em);
+                            color: $branco;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .bottomMenu{
+        padding-top: 25px;
+        padding-bottom: 25px;
+        & ul{
+            & li{
+                display: inline-block;
+                margin-right: 25px;
+                & a{
+                    @include fontDestaqueMX(1.1em);
+                    color: $branco;
+                }
+            }
+        }
+    }
+    & .copyright{
+        padding-top: 25px;
+        padding-bottom: 25px;
+        & p{
+            color: $branco;
+            @include fontPadraoMX(1.1em);
+        }
+    }
+}
 
+
+/* CSS - PARTIALS */
+
+
+/* HOME - INÍCIO */
 .home{
     .banner{
         & img{
@@ -317,98 +422,7 @@ header{
         }
     }
 }
+/* HOME-FIM */
 
+/* PORTFOLIO LISTA - INICIO*/
 
-footer{
-    background-color: #282b2e;
-    & .social{
-        padding-top: 25px;
-        padding-bottom: 25px;
-        & h2{
-            @include fontDestaqueMX(2.3em);
-            color: $branco;
-            margin-bottom: 30px;
-        }
-        & ul{
-            & li{
-                & ul{
-                    & li{
-                        display: inline-block;
-                        & a{
-                            color: $branco;
-                            & i{
-                                padding: 25px 0;
-                                width: 75px;
-                                border: 2px solid $branco;
-                                border-radius: 50%;
-                                text-align: center;
-                                font-size: 1.5em;
-                                margin-right: 10px;
-                                @include transitionMX(border-color, 0.2s);
-                                &:hover{
-                                    border-color: $vermelho;
-                                }
-                            }
-                            &:hover{
-                                @include transitionMX(color, 0.2s);
-                                color: $vermelho;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    & .contato{
-        padding-top: 25px;
-        padding-bottom: 25px;
-        background-color: #636a71;
-        & h2{
-            @include fontDestaqueMX(2.3em);
-            color: $branco;
-            margin-bottom: 30px;
-        }
-        & ul{
-            & li{
-                margin-bottom: 15px;
-                & ul{
-                    & li{
-                        & i{
-                            float: left;
-                            color: $branco;
-                            font-size: 1.9em;
-                            margin-right: 15px;
-                        }
-                        & p, a{
-                            @include fontPadraoMX(1em);
-                            color: $branco;
-                            margin-top: 10px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    & .bottomMenu{
-        padding-top: 25px;
-        padding-bottom: 25px;
-        & ul{
-            & li{
-                display: inline-block;
-                margin-right: 25px;
-                & a{
-                    @include fontDestaqueMX(1.1em);
-                    color: $branco;
-                }
-            }
-        }
-    }
-    & .copyright{
-        padding-top: 25px;
-        padding-bottom: 25px;
-        & p{
-            color: $branco;
-            @include fontPadraoMX(1.1em);
-        }
-    }
-}
