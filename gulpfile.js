@@ -40,7 +40,8 @@ gulp.task('sass', ['css'], function () {
 
 
 gulp.task('watch', function() {
-    gulp.watch(paths.sassSrcPath, ['sass'])
+    gulp.watch(paths.sassSrcPath, ['sass']);
+    gulp.watch('./css/style.css', ['css']);
 });
 
 gulp.task('default', ['sass','watch']);
