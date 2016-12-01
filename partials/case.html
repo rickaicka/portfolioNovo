@@ -14,7 +14,7 @@
     <section class="case">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-12 col-md-offset-2 col-md-8">
+                <div class="destaque col-xs-12 col-md-offset-2 col-md-8">
                     <ul>
                         <li>
                             <img src="../img/jsource1.jpg" class="img-responsive">
@@ -26,6 +26,34 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div class="row">
+                <div class="detalheCase col-xs-12 col-md-offset-2 col-md-8">
+                    <ul>
+                        <li>
+                            <p><i class="fa fa-clock-o"></i>{{casePortfolio.data | date: 'dd/MM/yyyy'}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="descricao col-xs-12 col-md-offset-2 col-md-4">
+                    <p>
+                        {{casePortfolio.descricao}}
+                    </p>
+                </div>
+                <aside class="tecnologias col-xs-12 col-md-3">
+                    <ul>
+                        <li>
+                            <h4>
+                                Tecnologias Utilizadas
+                            </h4>
+                        </li>
+                        <li class="tecnologia" ng-repeat="tecnologia in casePortfolio.tecnologias">
+                            <p><i class="fa fa-check-circle-o"></i> {{tecnologia.nome}}</p>
+                        </li>
+                    </ul>
+                </aside>
             </div>
         </div>
     </section>

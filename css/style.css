@@ -325,7 +325,7 @@ footer {
 .portfolio .case {
   margin-top: 25px;
   margin-bottom: 25px; }
-  .portfolio .case li h3 {
+  .portfolio .case .destaque ul li h3 {
     font-family: "Oswald", sans-serif;
     color: #6f6f73;
     font-size: 1.3em;
@@ -335,5 +335,38 @@ footer {
     margin-top: -45px;
     position: absolute;
     padding: 25px 20px 0px 10px; }
+  .portfolio .case .detalheCase ul li p {
+    font-family: "Open Sans", sans-serif;
+    color: #7e8082;
+    font-size: 0.8em;
+    margin-top: 10px; }
+    .portfolio .case .detalheCase ul li p i {
+      margin-right: 15px; }
+  .portfolio .case .descricao p {
+    font-family: "Open Sans", sans-serif;
+    color: #7e8082;
+    font-size: 1em;
+    margin-top: 10px;
+    text-align: justify; }
+  .portfolio .case .tecnologias {
+    margin-top: 10px; }
+    .portfolio .case .tecnologias ul li {
+      margin-bottom: 10px; }
+      .portfolio .case .tecnologias ul li h4 {
+        font-family: "Oswald", sans-serif;
+        color: #6f6f73;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        font-weight: 300; }
+      .portfolio .case .tecnologias ul li p {
+        font-family: "Oswald", sans-serif;
+        color: #6f6f73;
+        font-size: 1em;
+        text-transform: uppercase;
+        font-weight: 300; }
+        .portfolio .case .tecnologias ul li p i {
+          font-size: 2em;
+          color: #6f6f73;
+          font-weight: 100; }
 
 /* PORTFOLIO LISTA - INICIO*/

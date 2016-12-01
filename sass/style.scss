@@ -408,13 +408,58 @@ footer{
     & .case{
         margin-top: 25px;
         margin-bottom: 25px;
-        & li{
-            & h3{
-                @include fontDestaqueMX(1.3em);
-                background-color: $branco;
-                margin-top: -45px;
-                position: absolute;
-                padding: 25px 20px 0px 10px;
+        & .destaque{
+            & ul{
+                & li{
+                    & h3{
+                        @include fontDestaqueMX(1.3em);
+                        background-color: $branco;
+                        margin-top: -45px;
+                        position: absolute;
+                        padding: 25px 20px 0px 10px;
+                    }
+                }
+
+            }
+        }
+        & .detalheCase{
+            & ul{
+                & li{
+                    & p{
+                        @include fontPadraoMX(0.8em);
+                        margin-top: 10px;
+                        & i{
+                            margin-right: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        & .descricao{
+            & p{
+                @include fontPadraoMX(1em);
+                margin-top: 10px;
+                text-align: justify;
+            }
+        }
+        & .tecnologias{
+            margin-top: 10px;
+            & ul{
+                & li{
+                    margin-bottom: 10px;
+                    & h4{
+                        @include fontDestaqueMX(1.5em);
+                    }
+                    & p{
+                        @include fontDestaqueMX(1em);
+
+                        & i{
+                            font-size: 2em;
+                            color: $cinzaDestaque;
+                            font-weight: 100;
+                        }
+                    }
+                }
             }
         }
     }
