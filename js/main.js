@@ -21,9 +21,12 @@ angular.module('Main', ['ngRoute', 'iso.directives', 'ngResource']).config(funct
     });
 
     $routeProvider.when('/servicos', {
-        templateUrl:'partials/servicos.html',
-        controller:'ServicoController'
-    })
+        templateUrl:'partials/servicos.html'
+    });
+
+    $routeProvider.when('/contato', {
+        templateUrl:'app/views/contato.ejs'
+    });
 
     $routeProvider.otherwise({redirectTo:'/'})
 });

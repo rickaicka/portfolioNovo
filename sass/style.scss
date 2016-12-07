@@ -227,6 +227,36 @@ header{
         }
     }
 }
+.contato{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #636a71;
+    & h2{
+        @include fontDestaqueMX(2.3em);
+        color: $branco;
+        margin-bottom: 30px;
+    }
+    & ul{
+        & li{
+            margin-bottom: 15px;
+            & ul{
+                & li{
+                    & i{
+                        float: left;
+                        color: $branco;
+                        font-size: 1.9em;
+                        margin-right: 15px;
+                    }
+                    & p, a{
+                        @include fontPadraoMX(1em);
+                        color: $branco;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
 main{
     min-height: 100%;
     margin-bottom: -345px;
@@ -269,36 +299,6 @@ footer{
                                 @include transitionMX(color, 0.2s);
                                 color: $vermelho;
                             }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    & .contato{
-        padding-top: 25px;
-        padding-bottom: 25px;
-        background-color: #636a71;
-        & h2{
-            @include fontDestaqueMX(2.3em);
-            color: $branco;
-            margin-bottom: 30px;
-        }
-        & ul{
-            & li{
-                margin-bottom: 15px;
-                & ul{
-                    & li{
-                        & i{
-                            float: left;
-                            color: $branco;
-                            font-size: 1.9em;
-                            margin-right: 15px;
-                        }
-                        & p, a{
-                            @include fontPadraoMX(1em);
-                            color: $branco;
-                            margin-top: 10px;
                         }
                     }
                 }
@@ -467,22 +467,86 @@ footer{
 /* PORTFOLIO LISTA - FIM*/
 
 /* SERVICO - INCIO */
-
 .servicos{
     & .siteInstitucional, & .emailMarketing, & .wordpress{
-        background-color: $cinzaClaro;
-        & .icone, & .texto{
-            padding: 25px 0;
-            & i{
-                font-size: 4em;
-                color: $cinzaDestaque;
-            }
-        }
+        background-color: $cinzaClaro;        
     }
     & .landingPage, & .sistemas{
         background-color: #c7c8c9;
     }
+    & .icone, & .texto{
+        padding: 25px 0;
+        & i{
+            font-size: 4em;
+            color: $cinzaDestaque;
+            border: 4px solid $cinzaDestaque;
+            padding: 25px;
+            border-radius: 50%;
+        }
+        & h3{
+            @include fontDestaqueMX(1.5em);
+            padding-bottom: 10px;
+        }
+        & span{
+            @include fontDestaqueMX(1em);
+        }
+        & p{
+            @include fontPadraoMX(1em);
+            padding-top: 10px;
+        }
+    }
 }
-
-
 /* SERVICO - FIM */
+
+/* CONTATO - INICIO */
+.contatos{
+    & .formContato{
+        padding-top: 25px;
+        padding-bottom: 25px;
+        & ul{
+            & li{
+                & h4{
+                    @include fontDestaqueMX(2.3em);
+                    margin-bottom: 30px;
+                }
+                & form{
+                    & label{
+                        @include fontDestaqueMX(1em);
+                        padding-bottom: 10px;
+                    }
+                    & input, & textarea{
+                        @include fontPadraoMX(0.9em);
+                        resize: none;
+                    }
+                }
+            }
+        }
+    }
+    & .contato{
+        background-color: transparent;
+        & h2{
+        @include fontDestaqueMX(2.3em);
+        margin-bottom: 30px;
+        }
+        & ul{
+            & li{
+                margin-bottom: 15px;
+                & ul{
+                    & li{
+                        & i{
+                            float: left;
+                            color: $cinzaDestaque;
+                            font-size: 1.9em;
+                            margin-right: 15px;
+                        }
+                        & p, a{
+                            @include fontPadraoMX(1em);
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* CONTATO - FIM */

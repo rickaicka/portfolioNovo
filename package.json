@@ -22,7 +22,8 @@
     "ejs": "^2.5.2",
     "express": "^4.14.0",
     "express-load": "^1.1.15",
-    "method-override": "^2.3.7"
+    "method-override": "^2.3.7",
+    "nodemailer": "^2.6.4"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
