@@ -104,7 +104,7 @@ $break-small: 40em;
 }
 
 
-.servicos{
+.cases{
     padding-top: 30px;
     padding-bottom: 30px;
     & .title{
@@ -464,5 +464,25 @@ footer{
         }
     }
 }
-/* PORTFOLIO LISTA - INICIO*/
+/* PORTFOLIO LISTA - FIM*/
 
+/* SERVICO - INCIO */
+
+.servicos{
+    & .siteInstitucional, & .emailMarketing, & .wordpress{
+        background-color: $cinzaClaro;
+        & .icone, & .texto{
+            padding: 25px 0;
+            & i{
+                font-size: 4em;
+                color: $cinzaDestaque;
+            }
+        }
+    }
+    & .landingPage, & .sistemas{
+        background-color: #c7c8c9;
+    }
+}
+
+
+/* SERVICO - FIM */

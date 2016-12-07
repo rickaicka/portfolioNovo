@@ -18,6 +18,11 @@ angular.module('Main', ['ngRoute', 'iso.directives', 'ngResource']).config(funct
     $routeProvider.when('/portfolio/:caseId', {
         templateUrl:'partials/case.html',
         controller:'PortfolioController'
+    });
+
+    $routeProvider.when('/servicos', {
+        templateUrl:'partials/servicos.html',
+        controller:'ServicoController'
     })
 
     $routeProvider.otherwise({redirectTo:'/'})
