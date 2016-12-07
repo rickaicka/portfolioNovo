@@ -34,6 +34,7 @@ module.exports = function(app){
         smtpTrans.sendMail(smtpOpts, function(error, info){
            
             if(error){
+                console.log(error);
                 res.render('contato', {
                     title: 'Contato',
                     page: 'contato',
@@ -43,6 +44,7 @@ module.exports = function(app){
                     telefone: req.body.telefone
                 });
             }else{
+                console.log('E-mail enviado');
                 res.render('contato', {
                     title: 'Contato',
                     page: 'contato',
