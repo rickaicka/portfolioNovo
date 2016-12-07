@@ -24,7 +24,7 @@ angular.module('Main').controller('PortfolioController', function($scope, $route
                 $scope.casePortfolio = casePortfolio;
             },
             function(erro){
-                console.log("Não foi possível obter contato");
+                console.log("Não foi possível obter case");
                 console.log(erro);
             }
        );

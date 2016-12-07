@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 module.exports = function(){
     var app = express();
     //configuração de ambiente
-    app.set('port',8000);
+    app.set('port',21018);
 
     //middleware
     app.use(express.static('./'));
