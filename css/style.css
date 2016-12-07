@@ -22,9 +22,9 @@
     .servicosHomeMobile .arrow {
       z-index: 9;
       position: absolute;
-      bottom: 10px;
+      bottom: 0px;
       float: right;
-      left: 45%; }
+      left: 35%; }
       .servicosHomeMobile .arrow p {
         font-family: "Open Sans", sans-serif;
         color: #7e8082;
@@ -54,7 +54,9 @@
   main {
     margin-bottom: -625px !important; }
   footer, .push {
-    height: 625px !important; } }
+    height: 625px !important; }
+  .box {
+    padding-top: 25px !important; } }
 
 /* MEDIA QUERIES */
 /* COMMON CLASS */

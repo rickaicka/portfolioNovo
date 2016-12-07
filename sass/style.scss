@@ -67,9 +67,9 @@ $break-small: 40em;
         & .arrow{
             z-index:9;
             position: absolute;
-            bottom: 10px;
+            bottom: 0px;
             float: right;
-            left: 45%;
+            left: 35%;
             & p{
                 @include fontPadraoMX(0.8em);
                 color: $branco;
@@ -115,6 +115,10 @@ $break-small: 40em;
     }
     footer, .push{
         height: 625px!important;
+    }
+
+    .box{
+        padding-top: 25px!important;
     }
 }
 
