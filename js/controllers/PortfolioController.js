@@ -2,14 +2,21 @@ angular.module('Main').controller('PortfolioController', function($scope, $route
     
     $scope.cases = [];
     $scope.filtro = '';
+    /*
+               FTP
+
+    var Case = $resource('/nd-admin/portfolio/:id');
+    var Cases = $resource('/nd-admin/portfolio');*/
+
     var Case = $resource('/portfolio/:id');
+    var Cases = $resource('/portfolio');
     
     $scope.init = function(){
         buscaCases();
     };
     
     function buscaCases(){
-        Case.query(
+        Cases.query(
             function(cases){
                 $scope.cases = cases;
             }, function(erro){

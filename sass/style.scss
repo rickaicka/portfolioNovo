@@ -518,6 +518,12 @@ footer{
                         @include fontPadraoMX(0.9em);
                         resize: none;
                     }
+                    & button{
+                        @include fontDestaqueMX(1em);
+                        border-radius: none;
+                        color: $branco;
+                        letter-spacing: 2px;
+                    }
                 }
             }
         }

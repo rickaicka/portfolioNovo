@@ -429,6 +429,15 @@ footer {
     color: #7e8082;
     font-size: 0.9em;
     resize: none; }
+  .contatos .formContato ul li form button {
+    font-family: "Oswald", sans-serif;
+    color: #6f6f73;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 300;
+    border-radius: none;
+    color: #ffffff;
+    letter-spacing: 2px; }
 
 .contatos .contato {
   background-color: transparent; }
