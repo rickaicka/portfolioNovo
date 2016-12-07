@@ -1,4 +1,4 @@
-angular.module('Main', ['ngRoute', 'iso.directives', 'ngResource']).config(function($routeProvider){
+angular.module('Main', ['ngRoute', 'iso.directives', 'ngResource', 'angular-carousel']).config(function($routeProvider){
 
     $routeProvider.when('/index', {
         templateUrl:'partials/home.html',

@@ -28,7 +28,7 @@ module.exports = function(app){
             from: req.body.name + ' < ' + req.body.email + ' > ',
             to: 'ricardosalim7@hotmail.com',
             subject: 'Contato do Site Daruix Tecnologia',
-            text:'Nome: ' + req.body.name + '\nE-mail: ' + req.body.email + `\nTelefone: ` + req.body.telefon + `\nMensagem: ` + req.body.message
+            text:'Nome: ' + req.body.name + '\nE-mail: ' + req.body.email + `\nTelefone: ` + req.body.telefone + `\nMensagem: ` + req.body.message
         }
         
         smtpTrans.sendMail(smtpOpts, function(error, info){

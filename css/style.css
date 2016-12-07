@@ -14,6 +14,33 @@
       text-transform: uppercase;
       font-weight: 300;
       color: #ffffff; }
+  .servicosHomeMobile {
+    display: block !important; }
+    .servicosHomeMobile p {
+      width: 90%;
+      white-space: normal; }
+    .servicosHomeMobile .arrow {
+      z-index: 9;
+      position: absolute;
+      bottom: 10px;
+      float: right;
+      left: 45%; }
+      .servicosHomeMobile .arrow p {
+        font-family: "Open Sans", sans-serif;
+        color: #7e8082;
+        font-size: 0.8em;
+        color: #ffffff;
+        display: inline-block;
+        width: 150px;
+        margin-bottom: 15px;
+        padding-right: 20px; }
+      .servicosHomeMobile .arrow i {
+        font-size: 2em;
+        color: #ffffff;
+        position: absolute;
+        bottom: 5px; }
+  .servicosHomeDesktop {
+    display: none !important; }
   header .logo a img {
     height: 70px;
     margin: 0 auto; }
@@ -31,6 +58,9 @@
 
 /* MEDIA QUERIES */
 /* COMMON CLASS */
+.servicosHomeMobile {
+  display: none; }
+
 .pageTop {
   background-color: #A81E22;
   color: #ffffff;
@@ -319,7 +349,8 @@ footer {
         font-family: "Open Sans", sans-serif;
         color: #7e8082;
         font-size: 0.9em;
-        color: #ffffff; }
+        color: #ffffff;
+        line-height: 20px; }
 
 /* HOME-FIM */
 /* PORTFOLIO LISTA - INICIO*/

@@ -58,6 +58,38 @@ $break-small: 40em;
         }
     }
 
+    .servicosHomeMobile{
+        display: block!important;
+        & p{
+            width: 90%;
+            white-space: normal;
+        }
+        & .arrow{
+            z-index:9;
+            position: absolute;
+            bottom: 10px;
+            float: right;
+            left: 45%;
+            & p{
+                @include fontPadraoMX(0.8em);
+                color: $branco;
+                display: inline-block;
+                width: 150px;
+                margin-bottom: 15px;
+                padding-right: 20px;
+            }
+            & i{
+                font-size: 2em;
+                color: $branco;
+                position: absolute;
+                bottom: 5px;
+            }
+        }
+        
+    }
+    .servicosHomeDesktop{
+        display: none!important;
+    }
     header{
         & .logo{
             & a{
@@ -89,6 +121,9 @@ $break-small: 40em;
 /* MEDIA QUERIES */
 
 /* COMMON CLASS */
+.servicosHomeMobile{
+    display:none;
+}
 .pageTop{
     @include pageTitleMX();
     & div{
@@ -395,6 +430,7 @@ footer{
                     & p{
                         @include fontPadraoMX(0.9em);
                         color: $branco;
+                        line-height: 20px;
                     }
                 }
             }
