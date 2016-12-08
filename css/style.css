@@ -277,12 +277,25 @@ footer {
         color: #ffffff; }
   footer .copyright {
     padding-top: 25px;
-    padding-bottom: 25px; }
+    padding-bottom: 10px; }
     footer .copyright p {
       color: #ffffff;
       font-family: "Open Sans", sans-serif;
       color: #7e8082;
       font-size: 1.1em; }
+    footer .copyright .restrito a {
+      font-family: "Oswald", sans-serif;
+      color: #6f6f73;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      font-weight: 300;
+      color: #ffffff;
+      letter-spacing: 3px;
+      -webkit-transition: color, 0.2s;
+      transition: color, 0.2s; }
+      footer .copyright .restrito a:hover {
+        color: #A81E22;
+        text-decoration: none; }
 
 /* CSS - PARTIALS */
 /* HOME - INÍCIO */

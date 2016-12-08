@@ -360,10 +360,22 @@ footer{
     }
     & .copyright{
         padding-top: 25px;
-        padding-bottom: 25px;
+        padding-bottom: 10px;
         & p{
             color: $branco;
             @include fontPadraoMX(1.1em);
+        }
+        & .restrito{
+            & a{
+                @include fontDestaqueMX(0.9em);
+                color: $branco;
+                letter-spacing: 3px;
+                @include transitionMX(color, 0.2s);
+                &:hover{
+                    color: $vermelho;
+                    text-decoration: none;
+                }
+            }
         }
     }
 }
