@@ -1,5 +1,0 @@
-$(function(){
-    $('.menu').slicknav({
-        label:""
-    });
-});
