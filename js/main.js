@@ -1,13 +1,11 @@
 angular.module('Main', ['ngRoute', 'iso.directives', 'ngResource', 'angular-carousel']).config(function($routeProvider){
 
     $routeProvider.when('/index', {
-        templateUrl:'partials/home.html',
-        controller:'IndexController'
+        templateUrl:'partials/home.html'
     });
 
     $routeProvider.when('/', {
-        templateUrl:'partials/home.html',
-        controller:'IndexController'
+        templateUrl:'partials/home.html'
     });
 
     $routeProvider.when('/portfolio', {
