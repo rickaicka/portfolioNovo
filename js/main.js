@@ -10,12 +10,12 @@ angular.module('Main', ['ngRoute', 'iso.directives', 'ngResource', 'angular-caro
 
     $routeProvider.when('/portfolio', {
         templateUrl:'partials/portfolio.html',
-        controller: 'PortfolioController'
+        controller: 'PortfolioListaController'
     });
     
     $routeProvider.when('/portfolio/:caseId', {
         templateUrl:'partials/case.html',
-        controller:'PortfolioController'
+        controller:'PortfolioCaseController'
     });
 
     $routeProvider.when('/servicos', {
