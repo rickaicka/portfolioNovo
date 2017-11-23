@@ -1,7 +1,7 @@
-angular.module('Main').controller('PortfolioCaseController', function($scope, $routeParams, $resource){
+angular.module('Main').controller('PortfolioCaseController', function(AppConfigs, $scope, $routeParams, $resource){
     
     
-    var Case = $resource('http://507653c7.ngrok.io/v1/job/public/findJob/:id');
+    var Case = $resource(AppConfigs.apiEndpoint + '/job/public/findJob/:id');
     
     Case.get({id: $routeParams.caseId},
             function(result){

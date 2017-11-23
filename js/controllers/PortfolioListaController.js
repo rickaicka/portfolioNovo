@@ -1,6 +1,6 @@
-angular.module('Main').controller('PortfolioListaController', function($scope, $routeParams, $resource){
+angular.module('Main').controller('PortfolioListaController', function(AppConfigs, $scope, $routeParams, $resource){
     
-    var Cases = $resource('http://507653c7.ngrok.io/v1/job/public/jobs');
+    var Cases = $resource(AppConfigs.apiEndpoint + '/job/public/jobs');
     
     $scope.init = function(){
         buscaCases();
