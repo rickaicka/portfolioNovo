@@ -7,10 +7,14 @@
 
         // the options object
         var options = {
-            activeEnv : "development", // sets the active env
+            activeEnv : "production", // sets the active env
             development : {
                 apiEndpoint : 'http://19e8ceea.ngrok.io/v1', // note: without the last slash (/)
                 apiEndpointIE9 : 'http://19e8ceea.ngrok.io/v1'// for IE9 compatibility - same domain endpoint (no cors)
+            },
+            production : {
+                apiEndpoint : 'http://portfolioapi.daruixtecnologia.com.br/v1', // note: without the last slash (/)
+                apiEndpointIE9 : 'http://portfolioapi.daruixtecnologia.com.br/v1'// for IE9 compatibility - same domain endpoint (no cors)
             }
         };
 
